@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E73-LC-BSJ">
+                                <rect key="frame" x="240" y="285" width="120" height="30"/>
+                                <state key="normal" title="生成设备唯一标识">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="indentificer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hCP-9w-lPV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roY-bW-9aQ">
+                                <rect key="frame" x="300" y="323" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uol-q4-8Sr">
+                                <rect key="frame" x="285" y="247" width="30" height="30"/>
+                                <state key="normal" title="清除">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vHX-An-wfV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="E73-LC-BSJ" secondAttribute="centerX" id="2CM-hZ-KWB"/>
+                            <constraint firstAttribute="centerY" secondItem="E73-LC-BSJ" secondAttribute="centerY" id="6Vb-8B-d7F"/>
+                            <constraint firstItem="E73-LC-BSJ" firstAttribute="top" secondItem="Uol-q4-8Sr" secondAttribute="bottom" constant="8" id="PML-bG-tv6"/>
+                            <constraint firstItem="Uol-q4-8Sr" firstAttribute="centerX" secondItem="E73-LC-BSJ" secondAttribute="centerX" id="gQk-uw-fbA"/>
+                            <constraint firstItem="roY-bW-9aQ" firstAttribute="top" secondItem="E73-LC-BSJ" secondAttribute="bottom" constant="8" id="qpM-lh-jZy"/>
+                            <constraint firstItem="roY-bW-9aQ" firstAttribute="centerX" secondItem="E73-LC-BSJ" secondAttribute="centerX" id="y3j-cs-Q0u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="roY-bW-9aQ" id="NfR-cJ-Hxn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
